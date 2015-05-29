@@ -16,8 +16,8 @@
               else
                 add = $F[0]
                 del = $F[1]
-                file = $F[2]
-                puts "{\"additions\": #{$F[0]}, \"deletions\": #{$F[1]}, \"path\": \"#{$F[2]}\"},"
+                path = $F[2]
+                puts "{\"additions\": #{add}, \"deletions\": #{del}, \"path\": \"#{path}\"},"
               end
             end
         ' | \
