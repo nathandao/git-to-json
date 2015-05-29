@@ -27,7 +27,7 @@
         tr -d '\n' | \
         sed "s/,]/]/g; s/]}},//"
 
-## Expected JSON output:
+## JSON output:
 
     [
         {
@@ -38,12 +38,7 @@
                     {
                         "additions": 2,
                         "deletions": 0,
-                        "path": "Gemfile"
-                    },
-                    {
-                        "additions": 4,
-                        "deletions": 0,
-                        "path": "Gemfile.lock"
+                        "path": "path/to/Gemfile"
                     }
                 ]
             }
@@ -56,22 +51,22 @@
                     {
                         "additions": 2,
                         "deletions": 0,
-                        "path": "Gemfile"
+                        "path": "path/to/Gemfile"
                     },
                     {
                         "additions": 4,
                         "deletions": 0,
-                        "path": "Gemfile.lock"
+                        "path": "path/to/Gemfile.lock"
                     },
                     {
                         "additions": 8,
                         "deletions": 9,
-                        "path": "app.rb"
+                        "path": "path/to/app.rb"
                     },
                     {
                         "additions": 5,
                         "deletions": 2,
-                        "path": "config.yml"
+                        "path": "path/to/config.yml"
                     }
                 ]
             }
