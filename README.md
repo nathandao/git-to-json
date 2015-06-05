@@ -2,13 +2,13 @@
 
     git log \
         --numstat \
-        --format='id %h%nauthor %an%ndate %ai' $@ | \
+        --format='id %h%nauthor %an%ndate %ai %nchanges' $@ | \
         ruby -lawne '
             markers = %w{ id author date }
-            if $F.empty?
+            key = $F[0]
+            if key == "changes"
               puts "\"changes\": ["
             else
-              key = $F[0]
               if markers.include? key
                 $F.shift
                 value = $F.inject { |o, n| o + " " + n }
